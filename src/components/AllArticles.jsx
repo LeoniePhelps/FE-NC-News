@@ -12,7 +12,7 @@ export const AllArticles = () => {
   }, []);
 
   return (
-    <section>
+    <section className="all-articles">
       {articles.map((article) => {
         return (
           <ArticleCard
