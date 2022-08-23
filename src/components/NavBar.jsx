@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getTopics } from "./api";
+import { getTopics } from "../api";
 
 export const NavBar = () => {
   const [topicList, setTopicList] = useState([]);

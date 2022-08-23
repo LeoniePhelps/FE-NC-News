@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getAllArticles } from "./api";
+import { getAllArticles } from "../api";
 import { ArticleCard } from "./ArticleCard";
 import { NavBar } from "./NavBar";
 
