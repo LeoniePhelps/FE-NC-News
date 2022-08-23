@@ -38,5 +38,7 @@
     min-width: 30%;
     max-width: 30%;
     flex: auto;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 }
