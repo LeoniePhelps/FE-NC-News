@@ -21,6 +21,12 @@
   justify-content: space-around;
 }
 
+.nav-bar {
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+}
+
 @media screen and (min-width: 700px) {
   .all-articles {
     display: flex;
