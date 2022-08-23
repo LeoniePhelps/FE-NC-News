@@ -10,6 +10,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<AllArticles />} />
+          <Route path="/topic/:slug" element={<AllArticles />} />
         </Routes>
       </div>
     </BrowserRouter>
