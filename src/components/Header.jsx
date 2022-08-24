@@ -7,8 +7,8 @@ export const Header = () => {
     <section className="header">
       <Link to="/">
         <AiOutlineHome />
+        <h1>NC News</h1>
       </Link>
-      <h1>NC News</h1>
     </section>
   );
 };
