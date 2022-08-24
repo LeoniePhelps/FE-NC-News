@@ -1,6 +1,6 @@
 import React from "react";
 import { BiCommentDetail } from "react-icons/bi";
-import { HiOutlineHeart } from "react-icons/hi";
+import { TbHeart } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 export const ArticleCard = ({
@@ -22,7 +22,7 @@ export const ArticleCard = ({
             {comment_count}
           </section>
           <section>
-            <HiOutlineHeart /> {votes}
+            <TbHeart /> {votes}
           </section>
         </h3>
       </Link>
