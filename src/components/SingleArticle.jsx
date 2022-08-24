@@ -2,12 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../api";
 import { Votes } from "./Votes";
-const dayjs = require("dayjs");
-
-const dateFormatter = (date) => {
-  const monthDayYear = dayjs(date).format("DD MMMM YYYY, HH:mm");
-  return monthDayYear;
-};
+import { dateFormatterSingle } from "../dateFormatter";
 
 export const SingleArticle = () => {
   const [singleArticle, setSingleArticle] = useState({});
@@ -23,12 +18,12 @@ export const SingleArticle = () => {
 
   return (
     <div>
-      <section className="single-article">
+      <section className="single-article-card">
         <h2 className="single-article-title">{singleArticle.title}</h2>
         <p className="single-article-author">By {singleArticle.author}</p>
         <p className="single-article-body">{singleArticle.body}</p>
         <section className="topic-and-date">
-          <p>{dateFormatter(singleArticle.created_at)}</p>
+          <p>{dateFormatterSingle(singleArticle.created_at)}</p>
           <p>{singleArticle.topic}</p>
         </section>
       </section>
