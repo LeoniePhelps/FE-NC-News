@@ -11,6 +11,7 @@ export const NavBar = () => {
   }, []);
   return (
     <nav className="nav-bar">
+      <Link to="/">all articles</Link>
       {topicList.map((topic) => {
         return (
           <Link key={topic.slug} to={`/topic/${topic.slug}`}>
