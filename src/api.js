@@ -1,18 +1,21 @@
 import axios from "axios";
 
+const ncNewsBe = axios.create({
+  baseURL: "https://leonie-phelps-nc-news-be.herokuapp.com/api",
+});
+
 export const getAllArticles = (slug) => {
-  const topicStr = slug ? `?topic=${slug}` : ``;
-  return axios.get(
-    `https://leonie-phelps-nc-news-be.herokuapp.com/api/articles${topicStr}`
-  );
+  return ncNewsBe.get("/articles", { params: { topic: slug } });
 };
 
 export const getTopics = () => {
-  return axios.get("https://leonie-phelps-nc-news-be.herokuapp.com/api/topics");
+  return ncNewsBe.get("/topics");
 };
 
 export const getArticleById = (article_id) => {
-  return axios.get(
-    `https://leonie-phelps-nc-news-be.herokuapp.com/api/articles/${article_id}`
-  );
+  return ncNewsBe.get(`/articles/${article_id}`);
+};
+
+export const patchVotesByArticleId = (article_id, number) => {
+  return ncNewsBe.patch(`/articles/${article_id}`, { inc_votes: number });
 };
