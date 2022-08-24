@@ -18,6 +18,9 @@ a {
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
+
+/* NAV BAR */
+
 .news-intro {
   margin-left: 0.6em;
   font-size: 2em;
@@ -25,7 +28,6 @@ a {
   font-family: "Georgia", "times", serif;
   font-weight: lighter;
 }
-/* NAV BAR */
 
 .nav-bar {
   display: flex;
@@ -70,27 +72,26 @@ a {
 /* SINGLE ARTICLE */
 
 .single-article-card {
-
   margin-left: 0.9em;
   margin-right: 0.9em;
-
- 
 }
 
-.single-article-title{
+.single-article-topic {
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-left: 0.9em;
+}
+
+.single-article-title {
   font-family: "Georgia", "times", serif;
   font-weight: lighter;
   font-size: 1.9em;
-  margin-left: 0.7em;
+  margin-left: 0.5em;
   margin-right: 0.7em;
   margin-bottom: 0.2em;
-  padding-top: 1em;
-}
-
-.single-article-author {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 1rem;
 }
 
 .single-article-body {
@@ -99,13 +100,43 @@ a {
   margin-right: 0.5rem;
 }
 
-.topic-and-date {
+.single-article-date-author {
   display: flex;
-  justify-content: space-around;
-  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  margin-left: 0.6em;
+  margin-right: 0.7em;
 }
 
+/* VOTES */
 
+.votes {
+  margin-left: 1.5rem;
+}
+
+.vote-buttons {
+  margin-left: 1rem;
+}
+
+.up-button {
+  border: solid black 0.1em;
+  background-color: transparent;
+  font-size: 1.5em;
+  padding-top: 0.2em;
+}
+
+.down-button {
+  border: solid black 0.1em;
+  background-color: transparent;
+  font-size: 1.5em;
+  padding-top: 0.2em;
+}
+
+/* DESKTOP VIEW */
 
 @media screen and (min-width: 700px) {
   .all-articles {

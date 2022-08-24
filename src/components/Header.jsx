@@ -7,7 +7,6 @@ export const Header = () => {
       <Link to="/" className="title" id="title">
         <h1>NC News</h1>
       </Link>
-      <h2 className="news-intro">Discover Popular News Stories</h2>
     </section>
   );
 };

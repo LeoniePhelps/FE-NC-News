@@ -33,14 +33,24 @@ export const Votes = ({ article_id, optimisticVotes, setOptimisticVotes }) => {
 
   return (
     <section>
-      <h3>{optimisticVotes}</h3>
+      <h3 className="votes">{optimisticVotes}</h3>
       {voteError && <p>Something went wrong, please try again.</p>}
-      <button onClick={handleUpVote} disabled={disableUpVote}>
-        <TbHeartPlus />
-      </button>
-      <button onClick={handleDownVote} disabled={disableDownVote}>
-        <TbHeartMinus />
-      </button>
+      <div className="vote-buttons">
+        <button
+          className="up-button"
+          onClick={handleUpVote}
+          disabled={disableUpVote}
+        >
+          <TbHeartPlus />
+        </button>
+        <button
+          className="down-button"
+          onClick={handleDownVote}
+          disabled={disableDownVote}
+        >
+          <TbHeartMinus />
+        </button>
+      </div>
     </section>
   );
 };

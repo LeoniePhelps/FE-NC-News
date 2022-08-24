@@ -19,12 +19,12 @@ export const SingleArticle = () => {
   return (
     <div>
       <section className="single-article-card">
+        <p className="single-article-topic">| {singleArticle.topic}</p>
         <h2 className="single-article-title">{singleArticle.title}</h2>
-        <p className="single-article-author">By {singleArticle.author}</p>
         <p className="single-article-body">{singleArticle.body}</p>
-        <section className="topic-and-date">
+        <section className="single-article-date-author">
           <p>{dateFormatterSingle(singleArticle.created_at)}</p>
-          <p>{singleArticle.topic}</p>
+          <p>By {singleArticle.author}</p>
         </section>
       </section>
       <Votes
