@@ -74,6 +74,7 @@ a {
 .single-article-card {
   margin-left: 0.9em;
   margin-right: 0.9em;
+  background-color: rgb(255, 198, 222);
 }
 
 .single-article-topic {
