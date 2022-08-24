@@ -1,5 +1,6 @@
 .App {
   background-color: rgb(231, 231, 231);
+  min-height: 100vh;
 }
 
 .header {
@@ -13,6 +14,34 @@
   background-color: rgb(255, 255, 255);
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.single-article {
+  border: 0.1em rgb(159, 159, 159) solid;
+  border-radius: 0.8rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.single-article-author {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.single-article-body {
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.topic-and-date {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+
+.single-article-title {
+  margin-left: 0.5rem;
 }
 
 .comment-vote {
