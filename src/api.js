@@ -10,3 +10,9 @@ export const getAllArticles = (slug) => {
 export const getTopics = () => {
   return axios.get("https://leonie-phelps-nc-news-be.herokuapp.com/api/topics");
 };
+
+export const getArticleById = (article_id) => {
+  return axios.get(
+    `https://leonie-phelps-nc-news-be.herokuapp.com/api/articles/${article_id}`
+  );
+};
