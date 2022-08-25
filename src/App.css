@@ -232,6 +232,31 @@ a {
   color: rgb(157, 157, 157);
 }
 
+/* POST COMMENT */
+
+.add-comment {
+  display: flex;
+  flex: row;
+  justify-content: flex-start;
+  margin-top: 1em;
+  margin-left: 0.9em;
+  padding-top: 1em;
+}
+
+.comment-input {
+  border: solid 0.1em;
+  margin-right: 1em;
+  padding: 0.5em;
+  padding-right: 11em;
+}
+
+.comment-submit {
+  background-color: black;
+  border: none;
+  padding: 0.5em;
+  color: white;
+}
+
 /* DESKTOP VIEW */
 
 @media screen and (min-width: 700px) {
