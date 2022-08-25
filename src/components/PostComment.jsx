@@ -12,9 +12,13 @@ export const PostComment = ({ article_id }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    postCommentByArticleId(username, comment, article_id).catch((err) => {
-      console.log(err);
-    });
+    postCommentByArticleId(username, comment, article_id)
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

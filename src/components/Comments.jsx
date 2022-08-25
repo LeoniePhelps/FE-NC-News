@@ -9,9 +9,9 @@ export const Comments = ({ article_id }) => {
   useEffect(() => {
     getCommentsByArticleId(article_id).then(({ data }) => {
       data.sort((a, b) => {
-        let da = new Date(b.created_at);
-        let db = new Date(a.created_at);
-        return da - db;
+        let da = new Date(a.created_at);
+        let db = new Date(b.created_at);
+        return db - da;
       });
       setComments(data);
     });
