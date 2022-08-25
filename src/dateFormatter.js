@@ -11,6 +11,6 @@ export const dateFormatterCard = (date) => {
 };
 
 export const dateFormatterComment = (date) => {
-  const monthDayYear = dayjs(date).format("HH:mm, DD MMM");
+  const monthDayYear = dayjs(date).format("HH:mm, DD MMM YYYY");
   return monthDayYear;
 };
