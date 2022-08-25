@@ -18,7 +18,11 @@ export const Comments = ({ article_id }) => {
   }, [article_id]);
   return (
     <section>
-      <PostComment article_id={article_id} />
+      <PostComment
+        article_id={article_id}
+        setComments={setComments}
+        comments={comments}
+      />
       <h2 className="comment-title">Comments</h2>
       {comments.map((comment) => {
         return (
