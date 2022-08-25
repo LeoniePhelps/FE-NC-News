@@ -1,7 +1,8 @@
 import React from "react";
 import { BiCommentDetail } from "react-icons/bi";
-import { HiOutlineHeart } from "react-icons/hi";
+import { TbHeart } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { dateFormatterCard } from "../dateFormatter";
 
 export const ArticleCard = ({
   article_id,
@@ -14,17 +15,18 @@ export const ArticleCard = ({
 }) => {
   return (
     <article className="article-card">
-      <Link className="article-link" to={`/${article_id}`}>
-        <h2>{title}</h2>
-        <h3 className="comment-vote">
-          <section>
+      <Link to={`/${article_id}`}>
+        <h2 className="article-card-title">{title}</h2>
+        <section className="card-info">
+          <p>{dateFormatterCard(created_at)}</p>
+          <div>
             <BiCommentDetail />
             {comment_count}
-          </section>
-          <section>
-            <HiOutlineHeart /> {votes}
-          </section>
-        </h3>
+          </div>
+          <div>
+            <TbHeart /> {votes}
+          </div>
+        </section>
       </Link>
     </article>
   );

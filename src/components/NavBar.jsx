@@ -10,14 +10,20 @@ export const NavBar = () => {
     });
   }, []);
   return (
-    <nav className="nav-bar">
-      {topicList.map((topic) => {
-        return (
-          <Link key={topic.slug} to={`/topic/${topic.slug}`}>
-            {topic.slug}
-          </Link>
-        );
-      })}
-    </nav>
+    <section>
+      <section>
+        <h2 className="news-intro">Discover Popular News Stories</h2>
+      </section>
+      <nav className="nav-bar">
+        <Link to="/">all articles</Link>
+        {topicList.map((topic) => {
+          return (
+            <Link key={topic.slug} to={`/topic/${topic.slug}`}>
+              {topic.slug}
+            </Link>
+          );
+        })}
+      </nav>
+    </section>
   );
 };
