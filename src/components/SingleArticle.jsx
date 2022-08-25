@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getArticleById } from "../api";
 import { Votes } from "./Votes";
 import { dateFormatterSingle } from "../dateFormatter";
+import { Comments } from "./Comments";
 
 export const SingleArticle = () => {
   const [singleArticle, setSingleArticle] = useState({});
@@ -33,6 +34,7 @@ export const SingleArticle = () => {
         optimisticVotes={optimisticVotes}
         setOptimisticVotes={setOptimisticVotes}
       />
+      <Comments article_id={article_id} />
     </div>
   );
 };

@@ -19,3 +19,7 @@ export const getArticleById = (article_id) => {
 export const patchVotesByArticleId = (article_id, number) => {
   return ncNewsBe.patch(`/articles/${article_id}`, { inc_votes: number });
 };
+
+export const getCommentsByArticleId = (article_id) => {
+  return ncNewsBe.get(`/articles/${article_id}/comments`);
+};

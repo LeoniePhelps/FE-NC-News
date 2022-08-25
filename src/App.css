@@ -34,6 +34,46 @@ a {
   flex: row;
   justify-content: space-around;
   margin-bottom: 1rem;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 400;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+}
+
+.all-articles-link {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.coding {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.football {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.cooking {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 /* ARTICLE CARD */
@@ -84,6 +124,7 @@ a {
   font-weight: 400;
   font-size: 1.2em;
   margin-left: 0.9em;
+  padding-top: 0.5em;
 }
 
 .single-article-title {
@@ -116,7 +157,12 @@ a {
 /* VOTES */
 
 .votes {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 .vote-buttons {
@@ -124,17 +170,66 @@ a {
 }
 
 .up-button {
-  border: solid black 0.1em;
-  background-color: transparent;
+  border: none;
+  background-color: black;
   font-size: 1.5em;
+  color: white;
+  margin-right: 0.5em;
   padding-top: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .down-button {
-  border: solid black 0.1em;
-  background-color: transparent;
+  border: none;
+  background-color: black;
   font-size: 1.5em;
   padding-top: 0.2em;
+  color: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+/* COMMENTS */
+
+.comment-title {
+  padding-top: 1em;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.comment {
+  border: solid rgb(220, 220, 220) 1px;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  margin-bottom: 1em;
+}
+
+.comment-bar {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+.comment-body {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+
+.comment-info {
+  color: rgb(157, 157, 157);
 }
 
 /* DESKTOP VIEW */
