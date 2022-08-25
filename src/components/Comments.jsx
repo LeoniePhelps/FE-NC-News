@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { getCommentsByArticleId } from "../api";
+import { dateFormatterComment } from "../dateFormatter";
 
 export const Comments = ({ article_id }) => {
   const [comments, setComments] = useState([]);
@@ -14,9 +15,16 @@ export const Comments = ({ article_id }) => {
       <h2 className="comment-title">Comments</h2>
       {comments.map((comment) => {
         return (
-          <p className="comment" key={comments.comment_id}>
-            {comment.body}
-          </p>
+          <section className="comment" key={comments.comment_id}>
+            <p className="comment-body">{comment.body} </p>
+            <div className="comment-bar">
+              <p className="comment-votes"> {comment.votes} Likes</p>
+              <p className="comment-info">
+                <span>by </span> {comment.author} <span>at </span>
+                {dateFormatterComment(comment.created_at)}
+              </p>
+            </div>
+          </section>
         );
       })}
     </section>

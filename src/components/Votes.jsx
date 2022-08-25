@@ -33,7 +33,7 @@ export const Votes = ({ article_id, optimisticVotes, setOptimisticVotes }) => {
 
   return (
     <section>
-      <h3 className="votes"> Likes {optimisticVotes}</h3>
+      <h3 className="votes">{optimisticVotes} Likes</h3>
       {voteError && <p>Something went wrong, please try again.</p>}
       <div className="vote-buttons">
         <button
