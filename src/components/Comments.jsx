@@ -20,7 +20,7 @@ export const Comments = ({ article_id }) => {
             <div className="comment-bar">
               <p className="comment-votes"> {comment.votes} Likes</p>
               <p className="comment-info">
-                <span>by </span> {comment.author} <span>at </span>
+                by {comment.author} at{" "}
                 {dateFormatterComment(comment.created_at)}
               </p>
             </div>
