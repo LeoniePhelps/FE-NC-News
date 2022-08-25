@@ -34,6 +34,46 @@ a {
   flex: row;
   justify-content: space-around;
   margin-bottom: 1rem;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 400;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+}
+
+.all-articles-link {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.coding {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.football {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.cooking {
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 /* ARTICLE CARD */
@@ -133,9 +173,9 @@ a {
   border: none;
   background-color: black;
   font-size: 1.5em;
-  padding-top: 0.2em;
   color: white;
   margin-right: 0.5em;
+  padding-top: 0.2em;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
