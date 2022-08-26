@@ -4,8 +4,10 @@ const ncNewsBe = axios.create({
   baseURL: "https://leonie-phelps-nc-news-be.herokuapp.com/api",
 });
 
-export const getAllArticles = (slug) => {
-  return ncNewsBe.get("/articles", { params: { topic: slug } });
+export const getAllArticles = (slug, sortBy, order) => {
+  return ncNewsBe.get("/articles", {
+    params: { topic: slug, sort_by: sortBy, order: order },
+  });
 };
 
 export const getTopics = () => {
@@ -29,5 +31,4 @@ export const postCommentByArticleId = (username, body, article_id) => {
     username: username,
     body: body,
   });
-
 };
