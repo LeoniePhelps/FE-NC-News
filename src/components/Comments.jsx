@@ -1,10 +1,17 @@
 import { React, useEffect, useState } from "react";
-import { getCommentsByArticleId } from "../api";
+import { deleteCommentByCommentId, getCommentsByArticleId } from "../api";
 import { dateFormatterComment } from "../dateFormatter";
 import { PostComment } from "./PostComment";
 
 export const Comments = ({ article_id }) => {
+  const username = "grumpy19";
   const [comments, setComments] = useState([]);
+  const [deleted, setDeleted] = useState(false);
+
+  const handleDelete = (comment_id) => {
+    setDeleted(true);
+    deleteCommentByCommentId(comment_id);
+  };
 
   useEffect(() => {
     getCommentsByArticleId(article_id).then(({ data }) => {
@@ -35,6 +42,17 @@ export const Comments = ({ article_id }) => {
                 {dateFormatterComment(comment.created_at)}
               </p>
             </div>
+            {username === comment.author && (
+              <button
+                className="comment-delete-button"
+                onClick={() => {
+                  handleDelete(comment.comment_id);
+                }}
+              >
+                delete
+              </button>
+            )}
+            {deleted && <p>comment deleted</p>}
           </section>
         );
       })}
