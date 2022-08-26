@@ -41,14 +41,14 @@ export const PostComment = ({ article_id, setComments, comments }) => {
   return (
     <section className="add-comment">
       <form onSubmit={handleSubmit}>
-        <input
+        <textarea
           required
           className="comment-input"
           value={comment}
           onChange={handleChange}
           type="text"
           placeholder="Write a comment..."
-        ></input>
+        ></textarea>
         <button disabled={isPosting} className="comment-submit" type="submit">
           post
         </button>
