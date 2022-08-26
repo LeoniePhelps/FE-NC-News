@@ -23,3 +23,11 @@ export const patchVotesByArticleId = (article_id, number) => {
 export const getCommentsByArticleId = (article_id) => {
   return ncNewsBe.get(`/articles/${article_id}/comments`);
 };
+
+export const postCommentByArticleId = (username, body, article_id) => {
+  return ncNewsBe.post(`/articles/${article_id}/comments`, {
+    username: username,
+    body: body,
+  });
+
+};
