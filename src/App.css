@@ -245,9 +245,6 @@ a {
 /* POST COMMENT */
 
 .add-comment {
-  display: flex;
-  flex: row;
-  justify-content: flex-start;
   margin-top: 1em;
   margin-left: 0.9em;
   padding-top: 1em;
@@ -257,13 +254,13 @@ a {
   border: solid 0.1em;
   margin-right: 1em;
   padding: 0.5em;
-  width: 21em;
+  width: 20em;
 }
 
 .comment-submit {
   background-color: black;
   border: none;
-  padding: 0.5em;
+  padding: 0.7em;
   color: white;
 }
 

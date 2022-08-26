@@ -6,17 +6,19 @@ import { NavBar } from "./NavBar";
 
 export const AllArticles = () => {
   const [articles, setArticles] = useState([]);
+  const [order, setOrder] = useState("DESC");
+  const [ sortBy, setSortBy] = useState("created_at");
   const { slug } = useParams();
 
   useEffect(() => {
-    getAllArticles(slug).then(({ data: { articles } }) => {
+    getAllArticles(slug, sortBy, order).then(({ data: { articles } }) => {
       setArticles(articles);
     });
-  }, [slug]);
+  }, [slug, order, sortBy]);
 
   return (
     <>
-      <NavBar />
+      <NavBar setSortBy={setSortBy} setOrder={setOrder} />
       <section className="all-articles">
         {articles.map((article) => {
           return (
