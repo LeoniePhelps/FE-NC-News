@@ -18,7 +18,7 @@ export const ArticleCard = ({
       <Link to={`/${article_id}`}>
         <h2 className="article-card-title">{title}</h2>
         <section className="card-info">
-          <p>{dateFormatterCard(created_at)}</p>
+          <p className="article-card-date">{dateFormatterCard(created_at)}</p>
           <div>
             <BiCommentDetail />
             {comment_count}

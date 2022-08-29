@@ -7,6 +7,14 @@ a {
   text-decoration: none;
 }
 
+button:active {
+  transform: translateY(3px);
+}
+
+a:active {
+  transform: translateY(3px);
+}
+
 /* HEADER */
 
 .title {
@@ -109,13 +117,18 @@ a {
   font-weight: 400;
   color: grey;
   padding-bottom: 1em;
+  padding-top: 0.5em;
 }
 
 .article-card {
   background-color: rgb(146, 223, 247);
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
   margin-left: 0.9em;
   margin-right: 0.9em;
+}
+
+.article-card-date {
+  margin-bottom: 0.1em;
 }
 
 /* SINGLE ARTICLE */
@@ -149,6 +162,7 @@ a {
   display: flex;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  font-size: 1.1em;
 }
 
 .single-article-date-author {
@@ -245,6 +259,7 @@ a {
 .comment-body {
   padding-left: 0.6em;
   padding-right: 0.6em;
+  font-size: 1.1em;
 }
 
 .comment-info {
