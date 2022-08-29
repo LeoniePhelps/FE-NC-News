@@ -46,22 +46,20 @@ export const PostComment = ({ article_id, setComments, comments }) => {
   };
 
   return (
-    <section className="add-comment">
-      <form onSubmit={handleSubmit}>
-        <textarea
-          required
-          className="comment-input"
-          value={comment}
-          onChange={handleChange}
-          type="text"
-          placeholder="Write a comment..."
-        ></textarea>
-        <button disabled={isPosting} className="comment-submit" type="submit">
-          post
-        </button>
-        {isPosting && <p>posting...</p>}
-        {err && <p>comment failed to post</p>}
-      </form>
-    </section>
+    <form className="add-comment" onSubmit={handleSubmit}>
+      <textarea
+        required
+        className="comment-input"
+        value={comment}
+        onChange={handleChange}
+        type="text"
+        placeholder="Write a comment..."
+      ></textarea>
+      <button disabled={isPosting} className="comment-submit" type="submit">
+        post
+      </button>
+      {isPosting && <p>posting...</p>}
+      {err && <p>comment failed to post</p>}
+    </form>
   );
 };

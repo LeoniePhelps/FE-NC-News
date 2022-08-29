@@ -31,16 +31,19 @@ export const CommentCard = ({ comments, setComments, comment }) => {
           by {comment.author} at {dateFormatterComment(comment.created_at)}
         </p>
       </div>
+
       {username === comment.author && (
-        <button
-          className="comment-delete-button"
-          onClick={() => {
-            handleDelete(comment.comment_id);
-          }}
-          disabled={deleteButtonDisabled}
-        >
-          delete
-        </button>
+        <div className="delete-row">
+          <button
+            className="comment-delete-button"
+            onClick={() => {
+              handleDelete(comment.comment_id);
+            }}
+            disabled={deleteButtonDisabled}
+          >
+            delete
+          </button>
+        </div>
       )}
     </section>
   );
