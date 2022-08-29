@@ -29,12 +29,17 @@ a:active {
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
-
+.user-name-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: flex-end;
+  margin-right: 0.4rem;
+}
 .user-icon {
-  color: rgb(151, 150, 150);
+  color: rgb(126, 126, 126);
   font-size: 1.5em;
   margin-top: 0.5em;
-  margin-left: 3.1em;
 }
 
 .username {
@@ -45,7 +50,6 @@ a:active {
   font-size: 0.9em;
   margin: 0em;
   color: rgb(102, 100, 101);
-  margin-right: 0.4em;
 }
 
 /* NAV BAR */
@@ -58,11 +62,17 @@ a:active {
   font-weight: lighter;
 }
 
+.pop-news {
+  text-decoration: underline rgb(251, 251, 130) 0.15em;
+  /*background: rgb(255, 255, 114);*/
+}
+
 .nav-bar {
   display: flex;
   flex: row;
   justify-content: space-around;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
+  align-items: center;
   font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -75,34 +85,38 @@ a:active {
   background-color: black;
   color: white;
   padding: 0.5em;
+  margin-right: 0.2em;
 }
 
 .coding {
   background-color: black;
   color: white;
   padding: 0.5em;
+  margin-right: 0.2em;
 }
 .football {
   background-color: black;
   color: white;
   padding: 0.5em;
+  margin-right: 0.2em;
 }
 .cooking {
   background-color: black;
   color: white;
   padding: 0.5em;
+  margin-left: 0.2em;
 }
 
 .order-by-filter {
-  background-color: black;
-  color: white;
-  border: none;
+  background-color: white;
+  color: black;
+  border: solid rgb(128, 128, 128);
   padding: 0.5em;
 }
 .sort-by-filter {
-  background-color: black;
-  color: white;
-  border: none;
+  background-color: white;
+  color: black;
+  border: solid rgb(128, 128, 128);
   padding: 0.5em;
 }
 
@@ -136,7 +150,7 @@ a:active {
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-weight: 400;
-  color: grey;
+  color: rgb(99, 99, 99);
   padding-bottom: 1em;
   padding-top: 0.5em;
 }
@@ -338,18 +352,70 @@ a:active {
 
 /* DESKTOP VIEW */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 0px;
+  }
+
+  .news-intro {
+    font-size: 3rem;
+    margin-left: 0rem;
+  }
+
+  .media-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  .nav-bar {
+    margin-left: 3rem;
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    width: 35%;
+  }
+  .filter-order {
+    margin-right: 3rem;
+    display: flex;
+  }
+
   .all-articles {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 1.2rem;
+    margin-top: 1em;
   }
 
+  .all-articles-link {
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    margin-right: 0em;
+  }
+
+  .coding {
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    margin-right: 0.2em;
+  }
+  .football {
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    margin-right: 0.2em;
+  }
+  .cooking {
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    margin-left: 0.2em;
+  }
   .article-card {
-    border: 0.1em rgb(159, 159, 159) solid;
-    border-radius: 1rem;
-    background-color: rgb(255, 255, 255);
     text-align: center;
     margin-bottom: 1rem;
     min-width: 30%;

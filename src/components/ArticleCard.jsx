@@ -10,7 +10,6 @@ export const ArticleCard = ({
   comment_count,
   created_at,
   title,
-  topic,
   votes,
 }) => {
   return (
