@@ -45,35 +45,44 @@ a {
 .all-articles-link {
   background-color: black;
   color: white;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding: 0.5em;
 }
 
 .coding {
   background-color: black;
   color: white;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding: 0.5em;
 }
 .football {
   background-color: black;
   color: white;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding: 0.5em;
 }
 .cooking {
   background-color: black;
   color: white;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding: 0.5em;
+}
+
+.order-by-filter {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5em;
+}
+.sort-by-filter {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5em;
+}
+
+.filter-order {
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  margin-left: 4em;
+  margin-right: 4em;
 }
 
 /* ARTICLE CARD */
@@ -267,6 +276,18 @@ a {
 .comment-submit:disabled {
   background-color: rgb(208, 208, 208);
   color: black;
+}
+
+/* DELETE COMMENT */
+
+.comment-delete-button {
+  margin-left: 21em;
+  margin-bottom: 0.5em;
+  border: none;
+  padding: 0.4em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: rgb(208, 208, 208);
 }
 
 /* DESKTOP VIEW */
