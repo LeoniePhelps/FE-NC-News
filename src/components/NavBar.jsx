@@ -39,15 +39,19 @@ export const NavBar = ({ setSortBy, setOrder }) => {
           );
         })}
       </nav>
-      <section>
-        <label> sort by...</label>
-        <select onChange={handleSortChange}>
+      <section className="filter-order">
+        <select className="sort-by-filter" onChange={handleSortChange}>
+          <option value="" disabled selected>
+            sort by...
+          </option>
           <option value="created_at">created at</option>
           <option value="votes">votes</option>
           <option value="title">title</option>
         </select>
-        <label> order by...</label>
-        <select onChange={handleOrderChange}>
+        <select className="order-by-filter" onChange={handleOrderChange}>
+          <option value="" disabled selected>
+            order by...
+          </option>
           <option value="DESC">descending</option>
           <option value="ASC">ascending</option>
         </select>

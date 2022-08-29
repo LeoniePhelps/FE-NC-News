@@ -1,8 +1,9 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import { postCommentByArticleId } from "../api";
+import { UserContext } from "../UserContext";
 
 export const PostComment = ({ article_id, setComments, comments }) => {
-  const username = "grumpy19";
+  const { username } = useContext(UserContext);
   const [comment, setComment] = useState("");
   const [isPosting, setIsPosting] = useState(false);
   const [err, setErr] = useState(false);
@@ -23,11 +24,17 @@ export const PostComment = ({ article_id, setComments, comments }) => {
     setComments([optimisticComment, ...comments]);
     setComment("");
     postCommentByArticleId(username, comment, article_id)
-      .then(() => {
+      .then((res) => {
+        setComments(
+          [...comments, res.data[0]].sort((a, b) => {
+            let da = new Date(a.created_at);
+            let db = new Date(b.created_at);
+            return db - da;
+          })
+        );
         setIsPosting(false);
       })
       .catch(() => {
-        console.log(comment.comment_id);
         setComments([
           ...comments.filter((currentComment) => {
             return currentComment.hasOwnProperty("comment_id");
