@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ncNewsBe = axios.create({
-  baseURL: "https://leonie-phelps-nc-news-be.herokuapp.com/api",
+  baseURL: "https://be-nc-news-production.up.railway.app/api",
 });
 
 export const getAllArticles = (slug, sortBy, order) => {
